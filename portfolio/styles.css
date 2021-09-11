@@ -1,16 +1,26 @@
 
-/* styles */
+/* Define colours */
+:root {
+    --colour-background:    #232324;    /* Dark slate */
+    --colour-accent1:       #FF77B8;    /* Deep pink */
+    --colour-textBright:    #FFFFFF;    /* White */
+    --colour-textDark:      #232324;    /* Dark slate */
+}
+
 
 body {
-    background-color: lightblue;
+    background-color: var(--colour-background);
 }
 
 h1 {
-    color: white;
+    color: var(--colour-textDark);
+    background-color: var(--colour-accent1);
     text-align: center;
 }
 
 p {
+    color: var(--colour-textBright);
+
     font-family: verdana;
     font-size: 20px;
 }
