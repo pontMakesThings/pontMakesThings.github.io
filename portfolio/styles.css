@@ -7,20 +7,54 @@
     --colour-textDark:      #232324;    /* Dark slate */
 }
 
-
+/* Defaults */
 body {
     background-color: var(--colour-background);
-}
-
-h1 {
-    color: var(--colour-textDark);
-    background-color: var(--colour-accent1);
-    text-align: center;
-}
-
-p {
-    color: var(--colour-textBright);
-
     font-family: verdana;
     font-size: 20px;
+
+}
+
+/* Page body */
+body{
+    /* Remove page margins */
+    margin-top:0px;
+    margin-left:0px;
+    margin-right:0px;
+}
+
+/* Header box */
+.TitleBox {
+    color: var(--colour-textDark);
+    background-color: var(--colour-accent1);
+    /* remove horizontal margins */
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* First level header */
+/* Huge */
+h1 {
+    text-align: left;
+    font-size: 150px;
+    /* bold */
+    font-weight: 700;
+    /* remove vertical margins */
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Second level header */
+/* Kinda big - subheader for h1 */
+h2 {
+    text-align: left;
+    font-size: 40px;
+    /* remove margins */
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Body text */
+p {
+    color: var(--colour-textBright);
 }
