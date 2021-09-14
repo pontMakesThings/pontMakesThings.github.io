@@ -1,27 +1,38 @@
 
-/* Define colours */
+/*#######################################################*/
+/* VARS */
+/*#######################################################*/
 :root {
-    --colour-background:    #232324;    /* Dark slate */
-    --colour-accent1:       #FF77B8;    /* Deep pink */
-    --colour-textBright:    #FFFFFF;    /* White */
-    --colour-textDark:      #232324;    /* Dark slate */
+    /* Define colours */
+    --colour-background: #232324; /* Dark slate */
+    --colour-accent1: #FF77B8; /* Deep pink */
+    --colour-textBright: #FFFFFF; /* White */
+    --colour-textDark: #232324; /* Dark slate */
 }
 
-/* Defaults */
+
+/*#######################################################*/
+/* GENERIC */
+/*#######################################################*/
+/* Page body */
 body {
+    /* Defaults */
     background-color: var(--colour-background);
     font-family: verdana;
     font-size: 20px;
-
-}
-
-/* Page body */
-body{
     /* Remove page margins */
     margin-top:0px;
     margin-left:0px;
     margin-right:0px;
 }
+/* Paragraph text */
+p {
+    color: var(--colour-textBright);
+}
+
+/*#######################################################*/
+/* HEADER */
+/*#######################################################*/
 
 /* Header box */
 .TitleBox {
@@ -54,7 +65,50 @@ h2 {
     margin-bottom: 0px;
 }
 
-/* Body text */
-p {
+/*#######################################################*/
+/* CONTENT TILE */
+/*#######################################################*/
+:root {
+    /* Define vars */
+    --contentTile-size: 50vmin;
+}
+
+/* Parent */
+.ContentTileContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+/* Content Tiles */
+.ContentTile {
+    /* Flexbox wizardry */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* No margins */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    /* Size */
+    width: var(--contentTile-size);
+    height: var(--contentTile-size);
+    /* Text */
+    text-align: center;
     color: var(--colour-textBright);
+}
+.ContentTileImage{
+    object-fit:cover !important;
+    width:100%;
+    max-width:100%;
+    height:100%;
+    max-height:100%;
+}
+.ContentTileTextTitle {
+    /* Align bottom-middle */
+    transform: translateY(-100%);
+    font-size: 2rem;
+    /* TODO: this shadow sucks. too thin. improve me! */
+    text-shadow: 2px 2px 0 var(--colour-background), 2px -2px 0 var(--colour-background), -2px 2px 0 var(--colour-background), -2px -2px 0 var(--colour-background), 2px 0px 0 var(--colour-background), 0px 2px 0 var(--colour-background), -2px 0px 0 var(--colour-background), 0px -2px 0 var(--colour-background);
 }
