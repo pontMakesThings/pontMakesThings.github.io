@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\portfolio"
+    "\\portfolio",
+    "\\portfolio\\content",
+    "\\portfolio\\parts"
   ],
-  "SelectedNode": "\\portfolio\\main.html",
+  "SelectedNode": "\\portfolio\\content\\button_tf2m.png",
   "PreviewInSolutionExplorer": false
 }
