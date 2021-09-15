@@ -1,6 +1,6 @@
 
 /*#######################################################*/
-/* VARS */
+/* GLOBAL VARS */
 /*#######################################################*/
 :root {
     /* Define colours */
@@ -25,6 +25,12 @@ body {
     margin-left:0px;
     margin-right:0px;
 }
+/* Generic text */
+.GenericText{
+    color: var(--colour-textBright);
+    font-size: 1.2rem;
+    text-align:center;
+}
 
 /*#######################################################*/
 /* HEADER */
@@ -43,22 +49,24 @@ body {
 /* Huge */
 h1 {
     text-align: left;
-    font-size: 150px;
+    font-size: 100px;
     /* bold */
     font-weight: 700;
     /* remove vertical margins */
     margin-top: 0px;
     margin-bottom: 0px;
+    text-indent: 20px;
 }
 
 /* Second level header */
 /* Kinda big - subheader for h1 */
 h2 {
     text-align: left;
-    font-size: 40px;
+    font-size: 30px;
     /* remove margins */
     margin-top: 0px;
     margin-bottom: 0px;
+    text-indent:20px;
 }
 
 /*#######################################################*/
@@ -78,7 +86,7 @@ h2 {
 
 /* Content Tiles */
 .ContentTile {
-    /* Flexbox wizardry */
+    /* Flexbox */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,8 +128,27 @@ h2 {
 /*#######################################################*/
 /* PROJECT PAGES */
 /*#######################################################*/
+:root {
+    /* Define vars */
+    --projectButtonExternal-size: 10vmin; /* External button max size */
+}
+
 /* External site buttons */
-.projectButtonExternal {
+.projectButtonImage {
     /* Cursor interaction */
     cursor: pointer;
+    width: var(--projectButtonExternal-size);
+    padding-top: 2.35294117647% /* aspect ratio (derived from image size: 400 / 170) */
+}
+/* External site button subtitle text*/
+.projectButtonSubtitle {
+    font-size: 1rem;
+    text-align: center;
+    color: var(--colour-textBright);
+}
+/* External site button container */
+.projectButtonContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
