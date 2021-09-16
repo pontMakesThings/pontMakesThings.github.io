@@ -3,8 +3,9 @@
     "",
     "\\portfolio",
     "\\portfolio\\content",
+    "\\portfolio\\content\\hades",
     "\\portfolio\\projects"
   ],
-  "SelectedNode": "\\portfolio\\styles.css",
+  "SelectedNode": "\\portfolio\\content",
   "PreviewInSolutionExplorer": false
 }

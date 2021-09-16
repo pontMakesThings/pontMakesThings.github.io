@@ -7,6 +7,7 @@
     --colour-background: #232324; /* Dark slate */
     --colour-accent1: #FF77B8; /* Deep pink */
     --colour-textBright: #FFFFFF; /* White */
+    --colour-textDim: #DDDDDD; /* Light Grey */
     --colour-textDark: #232324; /* Dark slate */
 }
 
@@ -31,11 +32,18 @@ body {
     font-size: 1.2rem;
     text-align:center;
 }
-
+/* Generic page stylings */
+.PageStyle_Column{
+    margin-left:20vmin;
+    margin-right:20vmin;
+}
+/* Blank spacer */
+.Spacer{
+    margin-bottom:10px;
+}
 /*#######################################################*/
 /* HEADER */
 /*#######################################################*/
-
 /* Header box */
 .TitleBox {
     color: var(--colour-textDark);
@@ -124,31 +132,57 @@ h2 {
     pointer-events: none;
 }
 
-
 /*#######################################################*/
-/* PROJECT PAGES */
+/* PROJECT PAGES: GENERIC */
 /*#######################################################*/
-:root {
-    /* Define vars */
-    --projectButtonExternal-size: 10vmin; /* External button max size */
+/* Static images */
+.projectImageContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+/* Static images subtitle text */
+.projectImageSubtitle {
+    color: var(--colour-textDim);
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+/* Team credits text */
+.CreditsText {
+    color: var(--colour-textBright);
+    font-size: 1.2rem;
+    text-align: left;
 }
 
+/*#######################################################*/
+/* PROJECT PAGES: EXTERNAL SITE BUTTONS */
+/*#######################################################*/
+
+/* External site button container */
+.projectButtonContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    height: 20vmin;
+}
 /* External site buttons */
 .projectButtonImage {
+    object-fit: cover;
     /* Cursor interaction */
     cursor: pointer;
-    width: var(--projectButtonExternal-size);
-    padding-top: 2.35294117647% /* aspect ratio (derived from image size: 400 / 170) */
+    /* No margins */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 /* External site button subtitle text*/
 .projectButtonSubtitle {
     font-size: 1rem;
     text-align: center;
     color: var(--colour-textBright);
-}
-/* External site button container */
-.projectButtonContainer {
-    display: flex;
-    align-content: center;
-    justify-content: center;
 }
