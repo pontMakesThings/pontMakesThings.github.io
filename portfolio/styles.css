@@ -11,6 +11,7 @@
     --colour-textBright: #FFFFFF; /* White */
     --colour-textDim: #DDDDDD; /* Light Grey */
     --colour-textDark: #232324; /* Dark slate */
+    --colour-warning: #F9C547; /* Bright yellow */
 }
 
 
@@ -52,6 +53,13 @@ body {
     margin-left:20vmin;
     margin-right:20vmin;
 }
+/* On thin screens (4:3 w:h ratio or thinner), collapse margins */
+@media only screen and (max-aspect-ratio: 4/3) {
+    .PageStyle_Column{
+        margin-left:5vmin;
+        margin-right:5vmin;
+    }
+}
 /* Blank spacer */
 .Spacer{
     margin-bottom:20px;
@@ -68,7 +76,6 @@ body {
     margin-left: 0px;
     margin-right: 0px;
 }
-
 /* First level header */
 /* Huge */
 h1 {
@@ -81,7 +88,13 @@ h1 {
     margin-bottom: 0px;
     text-indent: 20px;
 }
-
+/* On thin screens (4:3 w:h ratio or thinner), shrink header */
+@media only screen and (max-aspect-ratio: 4/3){
+    h1{
+        font-size: 3.2rem;
+        font-weight: 900;
+    }
+}
 /* Second level header */
 /* Kinda big - subheader for h1 */
 h2 {
@@ -120,6 +133,40 @@ h2 {
     margin-bottom: 0px;
     text-indent: 0px;
 }
+/*#######################################################*/
+/* WARNINGS */
+/*#######################################################*/
+/* Warning container */
+.WarningBox {
+    /* flexbox */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    /* colours */
+    color: var(--colour-textDark);
+    background-color: var(--colour-warning);
+    /* margins */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+/* On thin screens (4:3 w:h ratio or thinner), display warning */
+@media only screen and (max-aspect-ratio: 4/3){
+    .WarningBox{
+        display: flex;
+    }
+}
+/* Warning text */
+.WarningText {
+    text-align: center;
+    font-size: 1.5rem;
+    /* remove margins */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-indent: 0px;
+    font-weight:700;
+}
 
 /*#######################################################*/
 /* BACK BUTTON */
@@ -156,6 +203,12 @@ h2 {
     margin-bottom: 0px;
     margin-top: 0px;
 }
+/* On thin screens (4:3 w:h ratio or thinner), boost size */
+@media only screen and (max-aspect-ratio: 4/3){
+    .BackButtonText{
+        font-size: 3rem;
+    }
+}
 .BackButtonText:hover {
     text-decoration: underline;
 }
@@ -178,6 +231,12 @@ h2 {
     position:fixed;
     right:0px;
     top:0px;
+}
+/* On thin screens (4:3 w:h ratio or thinner), collapse contact buttons into normal page flow */
+@media only screen and (max-aspect-ratio: 4/3) {
+    .ContactButton{
+        position:static;
+    }
 }
 .ContactButtonText {
     text-align: right;
@@ -219,6 +278,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    /*flex-wrap: wrap;*/ /* TODO: This breaks a lot of things. Worth fixing for better control over tiles though. Maybe later. */
     /* No margins */
     margin-top: 0px;
     margin-bottom: 0px;
@@ -236,11 +296,10 @@ h2 {
     text-decoration: none !important;
 }
 .ContentTileImage {
-    object-fit: cover !important;
+    object-fit: cover;
+    align-self: center;
     width: 100%;
-    max-width: 100%;
     height: 100%;
-    max-height: 100%;
     /* Cursor interaction */
     cursor: pointer;
     /* Outline formatting */
@@ -280,6 +339,12 @@ h2 {
     display: flex;
     align-content: center;
     justify-content: center;
+}
+/* On thin screens (4:3 w:h ratio or thinner), adjust flex flow */
+@media only screen and (max-aspect-ratio: 4/3) {
+    .projectImageContainer{
+        flex-wrap:wrap;
+    }
 }
 .projectImage {
     /* Outline formatting */
