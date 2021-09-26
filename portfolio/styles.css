@@ -314,14 +314,14 @@ h2 {
 }
 .ContentTileTextTitle {
     /* Align bottom-middle */
-    /*
-    transform: translateY(-250%);
-    */
     position:relative;
-    bottom:10rem;
+    bottom:5rem;
     font-size: 3rem;
     font-weight: 900;
-    line-height: 0px;
+    line-height: 0px;   /* Try make sure it doesn't take up space in the flow (keep tiles square-ish) */
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
     margin-bottom: -3rem;
     /* TODO: this shadow sucks. too thin. improve me! */
     text-shadow: 2px 2px 0 var(--colour-accent1), 2px -2px 0 var(--colour-accent1), -2px 2px 0 var(--colour-accent1), -2px -2px 0 var(--colour-accent1), 2px 0px 0 var(--colour-accent1), 0px 2px 0 var(--colour-accent1), -2px 0px 0 var(--colour-accent1), 0px -2px 0 var(--colour-accent1);
