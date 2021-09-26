@@ -3,10 +3,11 @@
     "",
     "\\portfolio",
     "\\portfolio\\content",
+    "\\portfolio\\content\\coppice",
     "\\portfolio\\parts",
     "\\portfolio\\projects",
     "\\portfolio\\scripts"
   ],
-  "SelectedNode": "\\portfolio\\parts\\footer.html",
+  "SelectedNode": "\\portfolio\\content\\coppice",
   "PreviewInSolutionExplorer": false
 }

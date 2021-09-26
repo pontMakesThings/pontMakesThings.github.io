@@ -441,3 +441,13 @@ h2 {
 .projectButtonSubtitle:active {
     color: #FFFFFF;
 }
+
+/*#######################################################*/
+/* PROJECT PAGES: VIDEO EMBEDS */
+/*#######################################################*/
+.VideoEmbedBox {
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
