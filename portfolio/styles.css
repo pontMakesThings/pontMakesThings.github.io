@@ -46,7 +46,7 @@ body {
 .GenericText{
     color: var(--colour-textBright);
     font-size: 1.2rem;
-    text-align:center;
+    text-align:left;
 }
 /* Generic page layouts */
 .PageStyle_Column{
