@@ -2,10 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\portfolio",
-    "\\portfolio\\content\\coppice",
     "\\portfolio\\parts",
-    "\\portfolio\\resume"
+    "\\portfolio\\resume",
+    "\\portfolio\\scripts"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\portfolio\\parts\\contacts.html",
   "PreviewInSolutionExplorer": false
 }
