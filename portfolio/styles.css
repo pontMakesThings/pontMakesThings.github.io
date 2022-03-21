@@ -12,6 +12,8 @@
     --colour-textDim: #DDDDDD; /* Light Grey */
     --colour-textDark: #232324; /* Dark slate */
     --colour-warning: #F9C547; /* Bright yellow */
+    /* Bespoke colours for specific use cases */
+    --colour-bespoke-contentTileButtonBackground: #23232499; /* Dark slate (--colour-background), semitransparent*/
 }
 
 
@@ -174,6 +176,7 @@ h2 {
     margin-bottom: 0px;
     text-indent: 0px;
 }
+
 /*#######################################################*/
 /* WARNINGS */
 /*#######################################################*/
@@ -343,38 +346,44 @@ h2 {
     /* Cursor interaction */
     cursor: pointer;
     /* Outline formatting */
-    outline-style: hidden;
+    /*outline-style: hidden;*/
+    outline-color: var(--colour-background);
+    outline-style: solid;
+    outline-width: 5px;
+    outline-offset: -4px;
 }
 .ContentTileImage:hover {
     outline-color: var(--colour-accent1);
     outline-style: solid;
     outline-width: 5px;
-    outline-offset: -5px;
+    outline-offset: -4px;
 }
 .ContentTileImage:active {
     outline-color: #FFFFFF;
     outline-style: solid;
     outline-width: 10px;
-    outline-offset: -10px;
+    outline-offset: -9px;
 }
 .ContentTileTextTitle {
     /* Align bottom-middle */
-    position:relative;
-    bottom:5rem;
+    position: relative;
+    bottom: 5rem;
     font-size: 3rem;
     font-weight: 900;
-    line-height: 0px;   /* Try make sure it doesn't take up space in the flow (keep tiles square-ish) */
+    line-height: 3.5rem; /* Controls visual banner thickness */
     margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: -3rem;
-    /* TODO: this shadow sucks. too thin. improve me! */
+    margin-left: 1rem; /* Controls visual banner inset L/R */
+    margin-right: 1rem;
+    margin-bottom: -3rem; /* Same as font-size; zero space in flex flow */
+    /* Colour and outline */
+    color: var(--colour-background);
     text-shadow: 2px 2px 0 var(--colour-accent1), 2px -2px 0 var(--colour-accent1), -2px 2px 0 var(--colour-accent1), -2px -2px 0 var(--colour-accent1), 2px 0px 0 var(--colour-accent1), 0px 2px 0 var(--colour-accent1), -2px 0px 0 var(--colour-accent1), 0px -2px 0 var(--colour-accent1);
     /* No cursor interaction (do not block link clicks) */
     pointer-events: none;
-    color: var(--colour-background);
     /* No underline */
     text-decoration: none !important;
+    /* Banner-like background fill */
+    background-color: var(--colour-bespoke-contentTileButtonBackground);
 }
 
 /*#######################################################*/
@@ -495,4 +504,49 @@ h2 {
     display: flex;
     align-content: center;
     justify-content: center;
+}
+
+/*#######################################################*/
+/* UNDER CONSTRUCTION BANNER */
+/*#######################################################*/
+/* Under Construction container */
+.UnderConstruction {
+    /* flexbox */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* colours */
+    color: var(--colour-textDark);
+    background-color: var(--colour-warning);
+    /* margins */
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/* Under Construction text */
+.UnderConstructionText {
+    text-align: center;
+    font-size: 1.5rem;
+    /* remove margins */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-indent: 0px;
+    font-weight: 700;
+}
+
+/* Under Construction text; decoration hazard-stripes */
+.UnderConstructionTextDecoration {
+    text-align: center;
+    font-size: 1.5rem;
+    /* remove margins */
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-indent: 0px;
+    font-weight: 700;
+    /* no kerning (seamless between glyph chars) */
+    letter-spacing: -0.175em;
+    /* stop emoji rendering (in combination with a trailing &#xFE0E after target glyphs) */
+    font-family: monospace
 }

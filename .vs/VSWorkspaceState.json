@@ -3,9 +3,10 @@
     "",
     "\\portfolio",
     "\\portfolio\\parts",
+    "\\portfolio\\projects",
     "\\portfolio\\resume",
     "\\portfolio\\scripts"
   ],
-  "SelectedNode": "\\portfolio\\parts\\contacts.html",
+  "SelectedNode": "\\portfolio\\scripts\\include.js",
   "PreviewInSolutionExplorer": false
 }
