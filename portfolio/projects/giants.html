@@ -36,17 +36,79 @@
         </div>
 
         <div class="Spacer">&nbsp</div>
-        <p class="GenericText"><b>Giants</b> is a rotationally symmetrical Capture the Flag map for Team Fortress 2 set in, vaguely, the snowy permafrost of Iceland. Development took place over two separate periods - the layout was rapidly iterated upon through April-March 2020, and was remade from scratch and artpassed over winter 2021-22.</p>
+        <p class="GenericText"><b>Giants</b> is a rotationally symmetrical Capture the Flag map for Team Fortress 2 set in a region of snowy permafrost of Iceland. Development took place over two separate periods - the layout was rapidly iterated upon through April-March 2020, and was remade from scratch and artpassed over winter 2021-22. The map features custom round timer logic and emphasises a push-pull flow to prevent the stalemates typical of the mode.</p>
         <p class="GenericText">Giants was originally developed for the <a class="GenericLink" href="https://tf2maps.net/threads/minor-contest-1-pick-it-up.41290/">Pick It Up! Contest</a>, <a class="GenericLink" href="https://tf2maps.net/threads/minor-contest-1-pick-it-up-results.41939/">placing fourth</a> (under a silly working name). Pretty good, considering how new I was to level design at that point!</p>
         <div class="Spacer">&nbsp</div>
 
+        <!--Alpha showcase: mid-->
+        <div class="projectImageContainer">
+            <a href="../content/giants/dev_mid01.jpg" target="_blank"><img class="projectImage" src="../content/giants/dev_mid01.jpg" style="width:100%;height:100%;" /></a>
+            <a href="../content/giants/dev_mid02.jpg" target="_blank"><img class="projectImage" src="../content/giants/dev_mid02.jpg" style="width:100%;height:100%;" /></a>
+            <a href="../content/giants/dev_mid03.jpg" target="_blank"><img class="projectImage" src="../content/giants/dev_mid03.jpg" style="width:100%;height:100%;" /></a>
+            <a href="../content/giants/dev_mid04.jpg" target="_blank"><img class="projectImage" src="../content/giants/dev_mid04.jpg" style="width:100%;height:100%;" /></a>
+            <a href="../content/giants/giants_07.jpg" target="_blank"><img class="projectImage" src="../content/giants/giants_07.jpg" style="width:100%;height:100%;" /></a>
+        </div>
+        <p class="projectImageSubtitle">Mid through whitebox iterations, and final.</p>
+
+        <div class="Spacer">&nbsp</div>
+        <p class="GenericText">Giants saw a large amount of iteration through development - though, ultimately, when it came to artpassing the project years later, I decided to remake the layout from scratch - the old brushwork was pretty bad, making it hard to work with and a lot of layout decisions were difficult to untangle. With a fresh file I was able to take the general shape of the map - which I knew worked pretty well - and remade it cleaner, while applying the knowledge I've gained since.</p>
+        <p class="GenericText">Mid saw a lot of changes through development. CtF mids are typically quite open, leading to a sort of no-man's-land - in Giants, mid takes more of a push-and-pull between both teams, while still being open enough to allow flanking players to sneak into the enemy base. This was a hard balance to strike! One of the biggest things I changed at mid when remaking the layout was dropping the second floor on the flanking buildings, and pushing the staircase up to the battlements into a corner. The old layout had issues with hard mid holds, and these elements were the culprits. It was a lot clearer in hindsight!</p>
+        <div class="Spacer">&nbsp</div>
+
+
+        <!--Alpha showcase: flag-->
+        <div class="projectImageContainer">
+            <a href="../content/giants/dev_flag01.jpg" target="_blank"><img class="projectImage" src="../content/giants/dev_flag01.jpg" style="width:100%;height:100%;" /></a>
+            <a href="../content/giants/dev_flag02.jpg" target="_blank"><img class="projectImage" src="../content/giants/dev_flag02.jpg" style="width:100%;height:100%;" /></a>
+            <a href="../content/giants/giants_09.jpg" target="_blank"><img class="projectImage" src="../content/giants/giants_09.jpg" style="width:100%;height:100%;" /></a>
+            <a href="../content/giants/dev_lobby01.jpg" target="_blank"><img class="projectImage" src="../content/giants/dev_lobby01.jpg" style="width:100%;height:100%;" /></a>
+            <a href="../content/giants/giants_10.jpg" target="_blank"><img class="projectImage" src="../content/giants/giants_10.jpg" style="width:100%;height:100%;" /></a>
+        </div>
+        <p class="projectImageSubtitle">Flag room and lobby through whitebox iterations, and finals.</p>
+
+        <div class="Spacer">&nbsp</div>
+        <p class="GenericText">A dropdown into the flag room allows for surprise pushes - further reducing CtF stalemates by discouraging turtling tactics - but the windows overlooking it felt oppressive for the defending team, so it eventually ended up as a tight vent that allowed vision but not combat between the spaces.</p>
+        <p class="GenericText">Lobby originally had a way up to the battlements. This layout element sucked, in hindsight, and was a symptom of how difficult the map as a whole became to work with. It is completely omitted from the remade layout, and is replaced with a stairwell that connects the layers of the base interior. Much easier to understand, and way better for player flow all round.</p>
+        <div class="Spacer">&nbsp</div>
+
+
+        <!--Timer logic-->
+        <div class="projectImageContainer" style="margin-left:20%; margin-right:20%;">
+            <a href="../content/giants/flag_io.png" target="_blank"><img class="projectImage" src="../content/giants/flag_io.png" style="width:100%;height:100%;" /></a>
+        </div>
+        <p class="projectImageSubtitle">Custom flag logic entities and corresponding diagram.</p>
+
+        <div class="Spacer">&nbsp</div>
+        <p class="GenericText">Giants features a <a class="GenericLink" target="_blank" href="https://tf2maps.net/downloads/ctf-timer-logic.10041/">custom entity IO setup</a> to properly handle a round timer (as by default, it will just stalemate immediately regardless of score if no team has hit the win threshold). It's available for others to download and use, too, and I made sure it was thoroughly documented.</p>
+        <p class="GenericText">The logic setup handles bonus time for when the losing team captures, and properly awards wins at timer runout based on flag statuses (dropped, carried, etc) instead of the terrible stock behaviour. There's a lot of fun tricks in here to work around TF2's lack of a full scripting language, like using comparator entities to store flag states.</p>
+        <div class="Spacer">&nbsp</div>
+
+
+        <!--Concepts-->
+        <div class="projectImageContainer">
+            <a href="../content/giants/concept_supercomputer01.png" target="_blank"><img class="projectImage" src="../content/giants/concept_supercomputer01.png" style="width:100%;height:100%;" /></a>
+            <a href="../content/giants/concept_supercomputer02.png" target="_blank"><img class="projectImage" src="../content/giants/concept_supercomputer02.png" style="width:100%;height:100%;" /></a>
+            <a href="../content/giants/concept_supercomputer03.png" target="_blank"><img class="projectImage" src="../content/giants/concept_supercomputer03.png" style="width:100%;height:100%;" /></a>
+             <a href="../content/giants/giants_04.jpg" target="_blank"><img class="projectImage" src="../content/giants/giants_04.jpg" style="width:100%;height:100%;" /></a>
+        </div>
+        <p class="projectImageSubtitle">The out-of-bounds supercomputer behind the flag room; Initial Hammer screengrab, drawover, annotated, and final. What a view!</p>
+
+        <div class="Spacer">&nbsp</div>
+        <p class="GenericText">A fair amount of concept art was created for important elements of the map's visual identity. I worked closely alongside an artist throughout, and our combined efforts turned out nothing short of stunning!</p>
+        <div class="Spacer">&nbsp</div>
+
+
+        <!--todo:
+
+            other bits of concept art
+
+        giants is my best work
+        optimisation
+        menuphotos
+
+        -->
         <!--TODO! under construction!-->
         <div w3-include-html="/portfolio/parts/underConstruction.html"></div>
-
-        <!--TODO!-->
-        <div class="Spacer">&nbsp</div>
-        <p class="GenericText">todo! go over development cycle. this page is wip as of 21/03/22</p>
-        <div class="Spacer">&nbsp</div>
 
         <p class="GenericText">A full development log is available on TF2Maps, linked below.</p>
         <div class="Spacer">&nbsp</div>
@@ -73,13 +135,11 @@
         <div class="Spacer">&nbsp</div>
         <div class="Spacer">&nbsp</div>
         <div class="CreditsTextContainer">
-            <p class="CreditsText"><b>Check out the rest of the Hades team, too:</b></p>
-            <p class="CreditsText"><b><a class="GenericLink" target="_blank" href="https://twitter.com/yrrzyz">Yrrzy</a></b> - Project Lead, Level Design, Concepts, Particles, Logic, Audio, and 2D Art</p>
-            <p class="CreditsText"><b>Pont</b> (That's me!) - Level Design, Logic, Additional Environment Art</p>
-            <p class="CreditsText"><b><a class="GenericLink" target="_blank" href="https://twitter.com/Freyja_Design">Freyja</a></b> - Environment Art, Map Models, Map Textures</p>
-            <p class="CreditsText"><b><a class="GenericLink" target="_blank" href="https://twitter.com/LiamMoffitt">Diva Dan</a></b> - Gameplay Models, Map Models</p>
-            <p class="CreditsText"><b><a class="GenericLink" target="_blank" href="https://twitter.com/DJB2401">DJB2401</a></b> - Concepts, Additional Models</p>
-            <p class="CreditsText"><b><a class="GenericLink" target="_blank" href="https://twitter.com/BumBarno">Barno</a></b> - Character Models</p>
+            <p class="CreditsText"><b>Check out the rest of the Giants team, too:</b></p>
+            <p class="CreditsText"><b>Pont</b> (That's me!) - Layout, Artpass</p>
+            <p class="CreditsText"><b><a class="GenericLink" target="_blank" href="https://iibo.games/">Kimberly Riswick</a></b> - Bespoke Map Assets</p>
+            <p class="CreditsText"><b><a class="GenericLink" target="_blank" href="https://twitter.com/yrrzyz">Yrrzy</a></b> - Environment Particles</p>
+            <p class="CreditsText"><b><a class="GenericLink" target="_blank" href="https://twitter.com/DisasterRobyn">Freyja</a></b> - Basalt Column Textures</p>
         </div>
     </div>
 
