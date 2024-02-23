@@ -1,12 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\portfolio",
-    "\\portfolio\\parts",
-    "\\portfolio\\projects",
-    "\\portfolio\\resume",
-    "\\portfolio\\scripts"
+    ""
   ],
-  "SelectedNode": "\\portfolio\\scripts\\include.js",
+  "SelectedNode": "\\index.html",
   "PreviewInSolutionExplorer": false
 }
